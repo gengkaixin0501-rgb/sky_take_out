@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+	// let arr = ['1', '2', '3'];
+	// // 1. 生成0到arr.length-1的随机整数
+	// let randomIndex = Math.floor(Math.random() * arr.length);
+	// // 2. 用splice()修改原数组（删除指定索引的1个元素）
+	// alert(randomIndex)
+	// arr.splice(randomIndex, 1);
+	// // 3. 输出修改后的数组
+	// console.log(arr);
+
+	function getRandom(N, M) {
+		return Math.floor(Math.random() * (M - N + 1)) + N
+	}
+
+	let random = getRandom(1, 10)
+
+	while (true) {
+		let num = +prompt()
+		if (num > random) {
+			alert('猜大了')
+		} else if (num < random) {
+			alert('猜小了')
+		} else {
+			alert('恭喜你')
+			break
+		}
+	}
+
+</script>
+
+</html>

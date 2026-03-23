@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		table,
+		tr,
+		th,
+		td {
+			width: 800px;
+			border: 1px solid red;
+			text-align: center;
+		}
+
+		table {
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<script>
+		let total = +prompt('请输入您的银行卡金额:')
+		let water = +prompt('请输入水费:')
+		let dian = +prompt('请输入电费:')
+		let wang = +prompt('请输入网费:')
+
+		let sy = total - water - dian - wang
+
+		document.write(`
+				<table>
+					<tr>
+						<th>银行卡金额</th>
+						<th>水费</th>
+						<th>电费</th>
+						<th>网费</th>
+						<th>剩余金额</th>
+					</tr>
+					<tr>
+						<td>${total}</td>
+						<td>${water}</td>
+						<td>${dian}</td>
+						<td>${wang}</td>
+						<td>${sy}</td>
+					</tr>
+				</table>
+		`)
+
+	</script>
+</body>
+
+</html>
